@@ -7,6 +7,8 @@ class Student:
         #if patronus and patronus not in ["Stag", "Otter", "Jack Russell terrier"]:
             #raise ValueError("Invalid patronus")
         self.name = name
+        ##都设置house为properties（self._house）了，这里还搞个self.house不是重复？
+        self.house = house
         #self.patronus = patronus
     
     #定义object被调用__str__（如print时）的行为
@@ -30,7 +32,7 @@ class Student:
     def house(self):
         return self._house
     
-    # Getter for house
+    # Setter for house
     @house.setter
     def house(self, house):
         if house not in ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"]:
